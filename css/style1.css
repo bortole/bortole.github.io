@@ -1,0 +1,13 @@
+.btn_1 {
+  display: block;
+  margin: 0 auto;
+  background-color: ff1;
+  -webkit-box-shadow: 1px 1px 10px #05090f;
+          box-shadow: 1px 1px 10px #05090f;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.btn_1:hover {
+  background-color: red;
+}
+/*# sourceMappingURL=style1.css.map */

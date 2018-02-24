@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="jdata"></div>
+    <div class="mypanel"></div>
+
+<script>
+
+var getJSON = function(url, callback) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    
+    xhr.onload = function() {
+    
+        var status = xhr.status;
+        
+        if (status == 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status);
+        }
+    };
+    
+    xhr.send();
+};
+
+
+getJSON('https://dweet.io/get/latest/dweet/for/olbo_temp22',  function(err, data) {
+    
+    if (err != null) {
+        console.error(err);
+    } else {
+       
+      <!--$(".jdata").html(JSON.parce(data.with));-->
+      <!--var obj = JSON.parse( data );-->
+
+      <!--var dt = {};-->
+      <!--var dt = JSON.parse(data);-->
+      <!--dt = ${data.with};-->
+    
+      var text = `1: ${data.by}<br>
+        2: ${data.the}<br>
+        3: ${data.with.slice(0,1)}`
+
+        <!--console.log(text);-->
+        $(".mypanel").html(text);
+        <!--$(".mypanel").html(dt);-->
+    }
+});
+
+</script>
+    
+</body>
+</html>

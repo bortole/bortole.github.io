@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <title>Температура в Витебске</title>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="css/j2.css">
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="Refresh" content="15">-->
+
+</head>
+
+<body>
+
+  <script>
+    $.getJSON('https://dweet.io/get/latest/dweet/for/olbo_temp22', function(data) {
+
+        var text = `${JSON.stringify(data.with)}`
+        var s1 = text.indexOf('payload":');
+        text = text.substring(s1+9);
+        s1 = text.indexOf('}');
+        text = text.substring(0,s1);
+
+				$(".temperature").html(text);
+    });
+  </script>
+  
+  <div class="box">
+   
+  <div class="box_small">
+  </div>
+    <div class="string1">
+      Температура в Витебске
+    </div>
+  <div class="box_small">
+  </div>
+
+    <div class="temperature"></div>
+
+    <div class="string3">
+      °C
+    </div>
+
+  </div>  
+
+</body>
+</html>

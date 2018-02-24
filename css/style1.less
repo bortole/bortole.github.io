@@ -1,0 +1,16 @@
+@btn_color: #1d365d;
+
+.border_radius(@radius) {
+    -border-radius: @radius;
+}
+
+.btn_1 {
+    display: block;
+    margin: 0 auto;
+    background-color: ff1;
+    box-shadow: 1px 1px 10px darken(@btn_color, 20%);
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: red;
+    }
+}

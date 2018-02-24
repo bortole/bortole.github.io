@@ -1,0 +1,67 @@
+body {
+	background: lightgray;
+	height: 100%;
+	margin: 0;
+}
+
+html {
+    text-align: center;
+    background: #fff;
+	height: 100%;
+}
+
+.box {
+    width: 240px;
+    text-align: center;
+    background-color: lightgray;
+    margin: 0 auto;
+	height: 100%;
+
+	background: lightgray; /* Для старых браузров */
+    background: linear-gradient(to top, lightgray, white);
+    /*padding: 10px;*/
+    /*border: 1px solid #333;*/
+}
+
+.temperature {
+    font-size: 48px;
+    font-family: sans-serif;;
+	color: grey;
+	text-shadow:
+			/*-1px -1px 0 #000,*/
+			/*1px -1px 0 #000,*/
+			/*-1px 1px 0 #000,*/
+			3px 3px 0 lightgrey;
+
+}
+
+.box_small {
+    height: 20px;
+    weight: 100%;
+    [>background-color: blue;<]
+}
+
+.string1 {
+	font-family: verdana;
+	color: black;
+	font-size: 16px;
+	text-shadow:
+			/*-1px -1px 0 #000,*/
+			/*1px -1px 0 #000,*/
+			/*-1px 1px 0 #000,*/
+			2px 2px 0 lightgrey;
+    /*border: 1px solid #000;*/
+	/*margin: 5px;*/
+    /*background-color: grey;	*/
+}
+
+.string3 {
+	font-family: verdana;
+	font-size: 24px;
+	color: grey;
+	text-shadow:
+			/*-1px -1px 0 #000,*/
+			/*1px -1px 0 #000,*/
+			/*-1px 1px 0 #000,*/
+			3px 3px 0 lightgrey;
+}

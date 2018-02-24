@@ -1,2 +1,78 @@
-Hello World!!!
-start test
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script>
+function insertReply(content) {
+    document.getElementById('output').innerHTML = content;
+}
+
+// create script element
+<!--var script = document.createElement('script');-->
+var script = document.createElement('payload');
+// assing src with callback name
+script.src = 'https://dweet.io/get/latest/dweet/for/olbo_temp22';
+// insert script to document and load content
+document.body.appendChild(script);
+
+    </script>
+
+<script>
+function CallURL()  {
+    $.ajax({
+        url: 'https://dweet.io/get/latest/dweet/for/olbo_temp22',
+        type: "GET",
+        dataType: "jsonp",
+        async: false,
+        success: function(msg)  {
+            JsonpCallback(msg);
+        },
+        error: function()  {
+            ErrorFunction();
+        }
+    });
+}
+CallURL();
+function JsonpCallback(json)  {
+    document.getElementById('payload').innerHTML = json.result;
+}
+</script>
+   
+  </head>
+  <body>
+    <p>
+    <h1>Hello World!!!</h1>
+    </p>
+
+  	<div id="result" style="color:red"></div>
+  	<div id="summary" style="color:red"></div>
+  	<div id="output" style="color:red"></div>
+
+    <div class="box">
+      <div class="box_text">
+        <div>
+          <p>
+            проба шрифта
+          </p>
+          <br>
+          <img src="img/185332_totoro.jpg" alt="" />
+        </div>
+      <p>
+        start test
+      </p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box_text">
+      <p>
+        start test 2
+      </p>
+      </div>
+    </div>
+
+  </body>
+
+</html>
