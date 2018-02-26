@@ -90,7 +90,7 @@ $(function(){
     // var height = canvas.height;
 
 clockImage = new Image();
-clockImage.src = 'images/cface.png';
+clockImage.src = 'img/cface.png';
 
     setInterval(drawScene, 1000); // loop drawScene
 });
