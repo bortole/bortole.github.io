@@ -199,6 +199,6 @@ $(function(){
     // var height = canvas.height;
 
 clockImage = new Image();
-clockImage.src = 'img/cface.png';
+clockImage.src = 'cface.png';
     setInterval(drawScene, 1000); // loop drawScene
 });
