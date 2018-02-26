@@ -1,1 +1,0 @@
-/home/sys/.scripts/git_add.sh
