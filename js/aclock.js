@@ -3,7 +3,7 @@
 var canvas, ctx;
 var clockRadius = 250;
 var clockImage;
-var zods = [0x2650,0x264f,0x264e,0x264d,0x264c,0x264b,0x264a,0x2649,0x2648,0x2653,0x2652,0x2651]
+//var zods = [0x2650,0x264f,0x264e,0x264d,0x264c,0x264b,0x264a,0x2649,0x2648,0x2653,0x2652,0x2651]
 
 
 var getJSON = function(url) {
@@ -52,7 +52,7 @@ function coord() {
 
                 s1 = dweet.indexOf('mc');
                 var text = dweet.substring(s1+2);
-                s1 = text.indexOf(';');
+                s1 = text.indexOf('}');
                 text = text.substring(0,s1);
         mc_coord = parseFloat(text);
         //mc.innerText = mc_coord; //display the result in an HTML element
@@ -116,17 +116,17 @@ function drawScene() { // main drawScene function
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.beginPath();
 
-    // draw numbers
-    ctx.font = '36px Arial';
-    ctx.fillStyle = '#000';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    for (var n = 1; n <= 12; n++) {
-        var theta = (n - 3) * (Math.PI * 2) / 12;
-        var x = clockRadius * 0.7 * Math.cos(theta);
-        var y = clockRadius * 0.7 * Math.sin(theta);
-        ctx.fillText(String.fromCharCode(zods [n-1]), x, y);
-    }
+    //// draw numbers
+    //ctx.font = '36px Arial';
+    //ctx.fillStyle = '#000';
+    //ctx.textAlign = 'center';
+    //ctx.textBaseline = 'middle';
+    //for (var n = 1; n <= 12; n++) {
+        //var theta = (n - 3) * (Math.PI * 2) / 12;
+        //var x = clockRadius * 0.7 * Math.cos(theta);
+        //var y = clockRadius * 0.7 * Math.sin(theta);
+        //ctx.fillText(String.fromCharCode(zods [n-1]), x, y);
+    //}
 
     // draw second
     ctx.save();
@@ -199,6 +199,6 @@ $(function(){
     // var height = canvas.height;
 
 clockImage = new Image();
-clockImage.src = 'cface.png';
+clockImage.src = 'img/aclock.svg';
     setInterval(drawScene, 1000); // loop drawScene
 });
