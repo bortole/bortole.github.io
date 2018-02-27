@@ -199,6 +199,6 @@ $(function(){
     // var height = canvas.height;
 
 clockImage = new Image();
-clockImage.src = 'img/aclock_.svg';
+clockImage.src = 'img/aclock.svg';
     setInterval(drawScene, 1000); // loop drawScene
 });
