@@ -187,7 +187,7 @@ function drawScene() { // main drawScene function
 
 // initialization
 coord();
-//coord_str();
+coord_str();
 setInterval(coord, 240000);
 setInterval(coord_str, 240000);
 
