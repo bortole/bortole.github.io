@@ -199,6 +199,6 @@ $(function(){
     // var height = canvas.height;
 
 clockImage = new Image();
-clockImage.src = ' bortole.github.io/aclock.png';
+clockImage.src = 'img/aclock.png';
     setInterval(drawScene, 1000); // loop drawScene
 });
