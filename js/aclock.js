@@ -111,7 +111,7 @@ function drawScene() { // main drawScene function
     ctx.save();
 
     // draw clock image (as background)
-    //ctx.drawImage(clockImage, 0, 0, 500, 500);
+    ctx.drawImage(clockImage, 0, 0, 500, 500);
 
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.beginPath();
@@ -184,8 +184,8 @@ function drawScene() { // main drawScene function
 
     ctx.restore();
 
-    var img = document.getElementById("circle");
-    ctx.drawImage(img, 10, 10);
+    //var img = document.getElementById("circle");
+    //ctx.drawImage(img, 10, 10);
 }
 
 // initialization
@@ -195,14 +195,14 @@ setInterval(coord, 240000);
 setInterval(coord_str, 240000);
 
 $(function(){
-    canvas = document.getElementById('canvas');
-    ctx = canvas.getContext('2d');
+	canvas = document.getElementById('canvas');
+	ctx = canvas.getContext('2d');
 
-    // var width = canvas.width;
-    // var height = canvas.height;
+     var width = canvas.width;
+     var height = canvas.height;
 
-//clockImage = new Image();
-//clockImage.src = 'img/aclock.png';
+	clockImage = new Image();
+	clockImage.src = 'img/aclock.png';
 
-    setInterval(drawScene, 1000); // loop drawScene
+	setInterval(drawScene, 1000); // loop drawScene
 });
