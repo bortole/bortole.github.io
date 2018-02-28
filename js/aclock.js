@@ -111,7 +111,7 @@ function drawScene() { // main drawScene function
     ctx.save();
 
     // draw clock image (as background)
-    //ctx.drawImage(clockImage, 0, 0, 500, 500);
+    ctx.drawImage(clockImage, 0, 0, 500, 500);
 
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.beginPath();
@@ -199,8 +199,8 @@ $(function(){
      var width = canvas.width;
      var height = canvas.height;
 
-	//clockImage = new Image();
-	//clockImage.src = 'img/aclock.png';
+	clockImage = new Image();
+	clockImage.src = 'img/aclock.png';
 
 	setInterval(drawScene, 1000); // loop drawScene
 });
