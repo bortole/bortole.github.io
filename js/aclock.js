@@ -187,7 +187,7 @@ function drawScene() { // main drawScene function
 
 // initialization
 coord();
-//coord_str();
+coord_str();
 setInterval(coord, 240000);
 setInterval(coord_str, 240000);
 
@@ -199,6 +199,6 @@ $(function(){
     // var height = canvas.height;
 
 clockImage = new Image();
-clockImage.src = 'img/aclock.svg';
+clockImage.src = 'img/aclock.png';
     setInterval(drawScene, 1000); // loop drawScene
 });
