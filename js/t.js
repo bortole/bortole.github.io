@@ -15,16 +15,16 @@ var getJSON = function(url) {
   });
 };
 
-getJSON('https://dweet.io/get/latest/dweet/for/olbo_temp22').then(function(data) {
+getJSON('https://dweet.io/get/latest/dweet/for/vitebsk_temperature').then(function(data) {
 <!--getJSON('http://time.jsontest.com').then(function(data) {-->
-    <!--alert('Your Json result is:  ' + data.result); //you can comment this, i used it to debug-->
+<!--alert('Your Json result is:  ' + data.result); //you can comment this, i used it to debug-->
 
     var text = JSON.stringify(data.with);
 
                 var text = `${JSON.stringify(data.with)}`
-                var s1 = text.indexOf('payload":');
-                text = text.substring(s1+9);
-                s1 = text.indexOf('}');
+                var s1 = text.indexOf('temperature":');
+                text = text.substring(s1+13);
+                s1 = text.indexOf(',');
                 text = text.substring(0,s1);
 
 
